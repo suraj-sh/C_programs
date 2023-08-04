@@ -498,3 +498,81 @@ int main(){
     printf("Sum is %d \n", sum);
     return 0;
 }
+
+/*  using nested for loops print the following star pattern
+    * * * * *
+    * * * * *
+    * * * * *
+    * * * * *
+*/  
+#include<stdio.h>
+
+void main(){
+
+    int rows = 4;
+    int cols = 5;
+
+    for(int i = 1; i <=4; i++ ){
+        for(int j = 1; j <= 5; j++){
+            printf("* ");
+        } 
+        printf("\n");
+    }
+}
+
+// WAP to check whether a number is prime or not
+#include<stdio.h>
+
+int main(){
+
+    int num;
+    int j = 0;
+    printf("Enter number : ");
+    scanf("%d", &num);
+
+    for(int i = 1; i <= num; i++ ){   
+        
+        if(num %i == 0){
+            j++;            // here j is incremented 
+        }
+    }
+    if (j == 2) {           // if j increments two times then it is prime 
+        printf("Prime number");
+    }
+    else {
+         printf("Not a Prime number");
+    }
+    return 0;
+}
+/*  a number which can only be divided with itself and not any other number    
+    i=1 i<=n i++  i=1 2<=3  i=2 2<=3  i=3 3<=3  
+    n%i==0        3%1 == 0  3%2 != 0  3%3 == 0 
+    j++           n=3 j=1   n=3 j=1   n=3 j=2
+*/ 
+
+// WAP to print prime numbers in a range
+#include <stdio.h>
+
+void main() {
+    int min, max;
+    printf("Enter min: ");
+    scanf("%d", &min);
+    printf("Enter max: ");
+    scanf("%d", &max);
+
+    printf("Prime numbers from %d to %d: ", min, max);
+    for (int n = min; n <= max; n++) {
+        int j = 0;
+
+        // logic to check for prime
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                j++;
+            }
+        }
+        if (j == 2) {
+            printf("%d ", n);
+        }
+    }
+    printf("\n");
+}
