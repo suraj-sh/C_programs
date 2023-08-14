@@ -65,46 +65,49 @@ void main(){
 // Program to understand instructions and operators
 #include<stdio.h>
 
-int main(){
+int main() {
 
     int a = (int) 1.999999; // explicit type conversion
-    printf("%d \n", a);
+    printf("%d \n", a); // Output: 1
 
-    printf("%d \n", 16%10); // modulus operator
+    printf("%d \n", 16 % 10); // Modulus operator: 16 divided by 10 leaves a remainder of 6
 
-    int b = 4 + 9 * 10;
-    printf("%d \n", b);
+    int b = 4 + 9 * 10; // Operator precedence: multiplication is performed before addition
+    printf("%d \n", b); // Output: 94
 
-    int c = 4 * 3 / 6 * 2;
-    printf("%d \n", c);
+    int c = 4 * 3 / 6 * 2; // multiplication and division are performed from left to right
+    printf("%d \n", c); // Output: 4
 
-    int d = 5 * 4 - 2 * 3;
-    printf("%d \n", d);
+    int d = 5 * 4 - 2 * 3; // multiplication is performed before subtraction
+    printf("%d \n", d); // Output: 14
 
-    int e = 5 * 2 - 2 / 3;
-    printf("%d \n", e);
+    int e = 5 * 2 - 2 / 3; // multiplication is performed before division, and division results in an integer (truncation)
+    printf("%d \n", e); // Output: 9
 
-    int f = 5 * (2 / 2) * 3;
-    printf("%d \n", f);
+    int f = 5 * (2 / 2) * 3; // inner parentheses are evaluated first
+    printf("%d \n", f); // Output: 15
 
-    int g = 5 + 2 / 2 * 3;
-    printf("%d \n", g);
+    int g = 5 + 2 / 2 * 3; // division is performed before multiplication, then addition
+    printf("%d \n", g); // Output: 8
+
     return 0;
 }
 
+
 // Program for assignment & logical operators
 #include<stdio.h>
-void main(){
-
-    printf("%d \n", 4 == 3); // operator returns 0 if false and 1 when true
-    printf("%d \n", 7 >= 5); 
-    printf("%d \n", 5 <= 4);
-    printf("%d \n", 7 != 5); 
-
-    printf("%d \n", 3 > 4 && 5 > 2); // if both are true then it returns 0 o.w 1
-    printf("%d \n", 3 > 4 || 5 > 2); // if one of them is true then it returns 1 o.w 0
-    printf("%d \n", !((3 > 4) || (5 > 2)) ); // if used ! it reverses the output 
+int main() {
+    printf("%d \n", 4 == 3); // Returns 0 (false) because 4 is not equal to 3
+    printf("%d \n", 7 >= 5); // Returns 1 (true) because 7 is greater than or equal to 5
+    printf("%d \n", 5 <= 4); // Returns 0 (false) because 5 is not less than or equal to 4
+    printf("%d \n", 7 != 5); // Returns 1 (true) because 7 is not equal to 5
+    
+    printf("%d \n", 3 > 4 && 5 > 2); // Returns 0 (false) because both conditions are not true (3 > 4 is false)
+    printf("%d \n", 3 > 4 || 5 > 2); // Returns 1 (true) because one of the conditions is true (5 > 2 is true)
+    printf("%d \n", !((3 > 4) || (5 > 2))); // Returns 0 (false) because the negation of a true condition is false
+    return 0;
 }
+
 
 // Program for assignment operator
 # include<stdio.h>
